@@ -31,7 +31,7 @@
 
           }
       }else{
-        echo 'login - Domotica';
+        echo 'Login - Domotica';
       }
     ?>
       

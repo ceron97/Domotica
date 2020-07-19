@@ -45,11 +45,34 @@
 							$_SESSION["id"] = $respuesta["id"];
 							$_SESSION["usuario"] = $respuesta["usuario"];
 
+							/*=============================================
+							= REGISTRAR FECHA HASTA EL ULTIMO LOGIN    =
+							=============================================*/
+
+							date_default_timezone_set('America/Bogota');
+
+							$fecha = date('Y-m-d');
+
+							$hora = date('H:i:s');
+
+							$fechaActual = $fecha.' '.$hora;
+
+							$item1="ultimo_login";
+							$valor1= $fechaActual;
+
+							$item2 ="id";
+							$valor2 =$respuesta["id"];
+
+							$ultimoLogin = usuarioModelo:: mdlActualizarUsuarios($tabla, $item1, $valor1, $item2, $valor2);
+
+							if ($ultimoLogin == "ok") {
+								
 								echo '<script>
 
 									window.location = "inicio";
 
 									</script>';
+							}
 						
 						}else{
 
@@ -521,30 +544,6 @@
 			$_SESSION["nombre"] = $respuesta["nombre"];
 			$_SESSION["foto"] = $respuesta["foto"];
             $_SESSION["perfil"] = $respuesta["perfil"];
-
-
-			//se actualiza el ultimo login de el usuario al reiniciar
-			//la pagina, iniciar sesion y cerrar sesion
-			/*=============================================
-			= REGISTRAR FECHA HASTA EL ULTIMO LOGIN    =
-			=============================================*/
-
-			date_default_timezone_set('America/Bogota');
-
-			$fecha = date('Y-m-d');
-
-			$hora = date('H:i:s');
-
-			$fechaActual = $fecha.' '.$hora;
-
-			$item1="ultimo_login";
-			$valor1= $fechaActual;
-
-			$item2 ="id";
-			$valor2 =$respuesta["id"];
-
-			$ultimoLogin = usuarioModelo:: mdlActualizarUsuarios($tabla, $item1, $valor1, $item2, $valor2);
-
 		}
 
 	}

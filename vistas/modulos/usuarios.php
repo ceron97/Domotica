@@ -48,7 +48,7 @@
 
         <div class="card-body" style="background: #adb5bd;">
 
-          <table class="table table-dark table-striped table-hover dt-responsive tablas ">
+          <table class="table table-dark table-striped table-hover dt-responsive tablas" width="100%">
 
             <thead>
 
@@ -265,7 +265,7 @@
                       
                     </div>
 
-                    <select class="form-control input-lg" name="nuevoPerfil">
+                    <select class="form-control input-lg" name="nuevoPerfil" required="">
 
                       <option value="">Selecionar Perfil</option>
 
