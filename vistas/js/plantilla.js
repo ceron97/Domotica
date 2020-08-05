@@ -30,30 +30,31 @@ $(".tablas").DataTable({
 $(".paginate_page").text("Página");
 $(".paginate_of").text($(".paginate_of").text().replace("of","de"));
 
-
-//Permite que muestre la seleccion de la pagina actual
-var url = window.location;
-const allLinks = document.querySelectorAll('.nav-item a');
-const currentLink = [...allLinks].filter(e => {
-    return e.href == url;
-});
-
-currentLink[0].classList.add("active");
-
-if (currentLink[0].closest(".nav-treeview")) {
-  currentLink[0].closest(".has-treeview").classList.add("menu-open");
-  currentLink[0].closest(".nav-treeview").style.display = "block ";
-}
-$('.menu-open').find('a').each(function() {
-  if (!$(this).parents().hasClass('active')) {
-    $(this).parents().addClass("active");
-    $(this).addClass("active");
-  }
-});
-
-//oculta la barra de navegación de dispositivos moviles
 window.addEventListener("load",function() {
+  
+  //oculta la barra de navegación de dispositivos moviles
   setTimeout(function(){
     window.scrollTo(0, 1);
   }, 0);
+
+
+  //Permite que muestre la seleccion de la pagina actual
+  var url = window.location;
+  const allLinks = document.querySelectorAll('.nav-item a');
+  const currentLink = [...allLinks].filter(e => {
+      return e.href == url;
+  });
+
+  currentLink[0].classList.add("active");
+
+  if (currentLink[0].closest(".nav-treeview")) {
+    currentLink[0].closest(".has-treeview").classList.add("menu-open");
+    currentLink[0].closest(".nav-treeview").style.display = "block ";
+  }
+  $('.menu-open').find('a').each(function() {
+    if (!$(this).parents().hasClass('active')) {
+      $(this).parents().addClass("active");
+      $(this).addClass("active");
+    }
+  });
 });
