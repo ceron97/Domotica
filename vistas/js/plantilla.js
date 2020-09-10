@@ -32,29 +32,22 @@ $(".paginate_of").text($(".paginate_of").text().replace("of","de"));
 
 window.addEventListener("load",function() {
   
-  //oculta la barra de navegación de dispositivos moviles
-  setTimeout(function(){
-    window.scrollTo(0, 1);
-  }, 0);
+        //oculta la barra de navegación de dispositivos moviles
+        setTimeout(function(){
+            window.scrollTo(0, 1);
+          }, 0);
 
 
-  //Permite que muestre la seleccion de la pagina actual
-  var url = window.location;
-  const allLinks = document.querySelectorAll('.nav-item a');
-  const currentLink = [...allLinks].filter(e => {
-      return e.href == url;
-  });
+        //Permite que muestre la seleccion de la pagina actual
+        var url = window.location;
 
-  currentLink[0].classList.add("active");
+        // treeview
+        $('ul.nav-treeview a').filter(function() {
+                return this.href == url;
+        }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
 
-  if (currentLink[0].closest(".nav-treeview")) {
-    currentLink[0].closest(".has-treeview").classList.add("menu-open");
-    currentLink[0].closest(".nav-treeview").style.display = "block ";
-  }
-  $('.menu-open').find('a').each(function() {
-    if (!$(this).parents().hasClass('active')) {
-      $(this).parents().addClass("active");
-      $(this).addClass("active");
-    }
-  });
+        // sidebar menu pero no afecta treeview
+        $('ul.nav-sidebar a').filter(function() {
+                return this.href == url;
+        }).addClass('active');
 });
