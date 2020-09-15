@@ -305,3 +305,129 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+  <!--================================
+    MODAL AGREGAR BOMBILLO
+  =================================-->
+
+<div class="modal fade" id="modalAgregarBombillo">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              
+                <h4 class="modal-title">Agregar bombillo</h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                  <span aria-hidden="true">&times;</span>
+
+                </button>
+
+              </div>
+
+               <!--================================
+                  CUERPO DEL MODAL
+                =================================-->
+
+              <div class="modal-body">
+
+                <div class="box-body">
+
+                  <!-- ingresar el nombre del bombillo -->
+
+                  <div class="form-group">
+                  
+                    <div class="input-group mb-3">
+
+                      <input type="text" class="form-control input-lg" placeholder="Ingrese el nombre del bombillo" name="nuevoNombre" required>
+
+                    </div>
+
+                  </div>
+
+                  <!-- Estado encendido/apagado -->
+
+                  <div class="form-group">
+                  
+                  <P>Seleccionar estado del bombillo:</P>
+                    <div class="input-group mb-3">
+
+                     <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
+
+                    </div>
+
+                  </div>
+
+                  <!-- seleccionar color del bombilllo -->
+
+                  <div class="form-group">
+                  
+                    <div class="input-group mb-3">
+
+                      <div class="input-group-prepend">
+                        
+                      </div>
+
+                        <div class="input-group my-colorpicker2">
+                          <input type="text" class="form-control"  placeholder="Seleccione el color del bombillo">
+
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-square"></i></span>
+                          </div>
+                        </div>
+
+                    </div>
+
+                  </div>
+
+                  <!-- intencidad -->
+
+                  <div class="form-group">
+                  
+                    <P>Intencidad:</P>
+
+                    <div class="input-group mb-3">
+
+                      <input type="range" class="custom-range" id="customRange1" style="width: 300px">
+                      
+                    </div>
+
+                  </div>
+
+                  <!-- monitorear -->
+
+                  <div class="form-group">
+                  
+
+                    <P>Monitoreo:</P>
+
+                    <div class="input-group mb-3">
+
+                     
+                      <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+               <!--================================
+                  FOOTER DEL MODAL
+                =================================-->
+
+              <div class="modal-footer justify-content-between">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+
+                <button type="submit" class="btn btn-success">Guardar cambios</button>
+
+              </div>
+
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+</div>
