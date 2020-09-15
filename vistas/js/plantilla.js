@@ -29,3 +29,12 @@ $(".tablas").DataTable({
 
 $(".paginate_page").text("Página");
 $(".paginate_of").text($(".paginate_of").text().replace("of","de"));
+
+//Colorpicker
+$('.my-colorpicker1').colorpicker()
+//color picker with addon
+$('.my-colorpicker2').colorpicker()
+
+$('.my-colorpicker2').on('colorpickerChange', function(event) {
+  $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+});

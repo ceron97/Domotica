@@ -39,6 +39,9 @@
   <!-- sweetalert 2 theme dark -->
   <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
 
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
 
   <!-- =============================================================
           JS
@@ -61,8 +64,13 @@
   <!-- sweetalert 2 theme dark -->
   <script src="sweetalert2/dist/sweetalert2.min.js"></script>
 
+  <!-- bootstrap color picker -->
+  <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 
-
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="vistas/plugins/chart.js/Chart.js"></script>
+  <script src="vistas/dist/js/demo.js"></script>
+  <script src="vistas/dist/js/pages/dashboard3.js"></script>
 
 
 </head>

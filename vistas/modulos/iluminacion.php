@@ -167,12 +167,24 @@
 
               <tbody>
 
+                <?php
+
+                  $item = null;
+
+                  $valor = null;
+
+                  $iluminacion = ControladorIluminacion::ctrMostrarIluminacion($item, $valor);
+
+                  foreach ($iluminacion as $key => $value) {
+                    
+                    echo '
+
                     <tr>
 
-                      <td>1</td>
+                      <td>'.($key+1).'</td>
 
-                      <td>Bombillo</td>
-      
+                      <td class="text-uppercase">'.$value["nombre"].'</td>
+
                       <td>
 
                         <button class="btn btn-outline-primary" id="btnOnOff" estadoBombillo="1">
@@ -204,88 +216,14 @@
                         </button>
 
                       </td>
-    
+
                     </tr>
 
-                    <tr>
+                    ';
 
-                      <td>2</td>
+                  }
 
-                      <td>Bombillo</td>
-      
-                      <td>
-
-                        <button class="btn btn-outline-primary">
-                          <i class="fas fa-lightbulb"></i>
-                        </button>
-
-                        <button class="btn btn-outline-success btnMonitorear">
-                          <i class="fa fa-book"></i>
-                        </button>
-
-                        <button class="btn btn-outline-info" data-toggle="modal" data-target="#modalRevisarBombillo">
-                          <i class="fas fa-eye"></i>
-                        </button>
-
-                        <button class="btn btn-outline-secondary">
-                          <i class="fab fa-cuttlefish"></i>
-                        </button>
-
-                        <button class="btn btn-default">
-                          <input type="range" class="custom-range" id="customRange1" style="width: 300px">
-                        </button>
-
-                        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modalEditarBombillo">
-                          <i class="fas fa-pencil-alt"></i>
-                        </button>
-
-                        <button class="btn btn-outline-danger btnEliminarBombillo">
-                          <i class="fa fa-times"></i>
-                        </button>
-
-                      </td>
-    
-                    </tr>
-
-                    <tr>
-
-                      <td>3</td>
-
-                      <td>Bombillo</td>
-      
-                      <td>
-
-                        <button class="btn btn-outline-primary">
-                          <i class="fas fa-lightbulb"></i>
-                        </button>
-
-                        <button class="btn btn-outline-success btnMonitorear">
-                          <i class="fa fa-book"></i>
-                        </button>
-
-                        <button class="btn btn-outline-info" data-toggle="modal" data-target="#modalRevisarBombillo">
-                          <i class="fas fa-eye"></i>
-                        </button>
-
-                        <button class="btn btn-outline-secondary">
-                          <i class="fab fa-cuttlefish"></i>
-                        </button>
-
-                        <button class="btn btn-default">
-                          <input type="range" class="custom-range" id="customRange1" style="width: 300px">
-                        </button>
-
-                        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modalEditarBombillo">
-                          <i class="fas fa-pencil-alt"></i>
-                        </button>
-
-                        <button class="btn btn-outline-danger btnEliminarBombillo">
-                          <i class="fa fa-times"></i>
-                        </button>
-
-                      </td>
-    
-                    </tr>
+                ?>
 
               </tbody>
 
@@ -306,128 +244,190 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!--================================
-    MODAL AGREGAR BOMBILLO
+ <!--================================
+    MODAL AGREGAR CATEGORIA
   =================================-->
 
 <div class="modal fade" id="modalAgregarBombillo">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              
-                <h4 class="modal-title">Agregar bombillo</h4>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal-dialog">
 
-                  <span aria-hidden="true">&times;</span>
+      <div class="modal-content">
 
-                </button>
+        <form role="form" method="post">
 
-              </div>
+          <!--================================
+              CABEZA DEL MODAL
+            =================================-->
 
-               <!--================================
-                  CUERPO DEL MODAL
-                =================================-->
+          <div class="modal-header"  style="background: #007bff; color: white">
 
-              <div class="modal-body">
+            <h4 class="modal-title">Agregar Bombillo</h4>
 
-                <div class="box-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
-                  <!-- ingresar el nombre del bombillo -->
+              <span aria-hidden="true">&times;</span>
 
-                  <div class="form-group">
-                  
-                    <div class="input-group mb-3">
+            </button>
 
-                      <input type="text" class="form-control input-lg" placeholder="Ingrese el nombre del bombillo" name="nuevoNombre" required>
+          </div>
 
-                    </div>
+          <!--================================
+              CUERPO DEL MODAL
+            =================================-->
 
-                  </div>
+          <div class="modal-body">
 
-                  <!-- Estado encendido/apagado -->
+            <div class="box-body">
 
-                  <div class="form-group">
-                  
-                  <P>Seleccionar estado del bombillo:</P>
-                    <div class="input-group mb-3">
+              <!-- ingresar el nombre del bombillo -->
 
-                     <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
-
-                    </div>
-
-                  </div>
-
-                  <!-- seleccionar color del bombilllo -->
-
-                  <div class="form-group">
-                  
-                    <div class="input-group mb-3">
-
-                      <div class="input-group-prepend">
-                        
-                      </div>
-
-                        <div class="input-group my-colorpicker2">
-                          <input type="text" class="form-control"  placeholder="Seleccione el color del bombillo">
-
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-square"></i></span>
-                          </div>
-                        </div>
-
-                    </div>
-
-                  </div>
-
-                  <!-- intencidad -->
-
-                  <div class="form-group">
-                  
-                    <P>Intencidad:</P>
-
-                    <div class="input-group mb-3">
-
-                      <input type="range" class="custom-range" id="customRange1" style="width: 300px">
+              <div class="form-group">
                       
-                    </div>
+                <div class="input-group mb-3">
+
+                  <div class="input-group-prepend">
+
+                    <span class="input-group-text"><i class="fa fa-th"></i></span>
 
                   </div>
 
-                  <!-- monitorear -->
-
-                  <div class="form-group">
-                  
-
-                    <P>Monitoreo:</P>
-
-                    <div class="input-group mb-3">
-
-                     
-                      <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
-
-                    </div>
-
-                  </div>
+                  <input type="text" class="form-control input-lg" placeholder="Ingrese el nombre del bombillo" id="nuevoNombre" name="nuevoNombre" required>
 
                 </div>
 
               </div>
 
-               <!--================================
-                  FOOTER DEL MODAL
-                =================================-->
+                <!-- Estado encendido/apagado -->
 
-              <div class="modal-footer justify-content-between">
+                <div class="form-group">
+                      
+                  <P>¿Bombillo esta encendido?:</P>
 
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                  <div class="input-group mb-3">
 
-                <button type="submit" class="btn btn-success">Guardar cambios</button>
+                    <div class="input-group-prepend">
 
-              </div>
+                      <span class="input-group-text"><i class="fa fa-th"></i></span>
+
+                    </div>
+
+                    <select class="form-control input-lg custom-select" id="nuevoEncendido" name="nuevoEncendido" required>
+
+                      <option value="1">Si</option> 
+                      <option value="0">No</option>
+                      
+                    </select>
+
+                  </div>
+
+                </div>
+
+                <!-- seleccionar color del bombilllo -->
+
+                <div class="form-group">
+                      
+                  <div class="input-group mb-3">
+
+                    <div class="input-group-prepend">
+
+                        <div class="input-group my-colorpicker2">
+
+                          <label for="nuevoColor">Seleccione el color:</label>
+
+                          <input type="color" id="nuevoColor" name="nuevoColor" value="#ff0000">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- intencidad -->
+
+                <div class="form-group">
+
+                  <script>
+
+                    function updateTextInput() {
+
+                      var slider = document.getElementById("nuevaIntensidad");
+
+                      var selectValue = document.getElementById("label");
+
+                      selectValue.innerHTML = slider.value;
+                      
+                    }
+                    
+                  </script>
+                      
+                  <P>Intensidad:</P>
+
+                    <div class="input-group mb-3">
+
+                      <input type="range" min="0" max="10" class="custom-range" id="nuevaIntensidad" name="nuevaIntensidad" value="" onchange="updateTextInput();">
+
+                      <label for="nuevaIntensidad" id="label">0</label>
+                        
+                    </div>
+
+                </div>
+
+                <!-- monitorear -->
+
+                <div class="form-group">
+                      
+                    <P>Estado de monitoreo:</P>
+
+                    <div class="input-group mb-3">
+
+                    <div class="input-group-prepend">
+
+                      <span class="input-group-text"><i class="fa fa-th"></i></span>
+
+                      </div>
+
+                      <select class="form-control input-lg custom-select" id="nuevoEstado" name="nuevoEstado" required>
+
+                      <option value="1">Si</option> 
+                      <option value="0">No</option>
+
+                      </select>
+
+                    </div>
+
+                </div>
+
+            </div>
 
           </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
+
+          <!--================================
+              FOOTER DEL MODAL
+            =================================-->
+
+          <div class="modal-footer justify-content-between">
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+
+          </div>
+
+          <?php
+
+            $crearBombillo = new ControladorIluminacion();
+
+            $crearBombillo -> ctrCrearBombillo();
+
+          ?>
+
+        </form>
+
+      </div>
+      <!-- /.modal-content -->
+    </div>
+<!-- /.modal-dialog -->
+
 </div>
+<!-- /.modal -->
