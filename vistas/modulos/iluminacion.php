@@ -151,7 +151,7 @@
 
           <div class="card-body table-responsive">
 
-            <table class="table table-bordered table-striped tabla">
+            <table class="table table-bordered table-striped tablas">
               
               <thead class="thead-dark">
                 

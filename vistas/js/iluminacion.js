@@ -17,7 +17,7 @@ $(".btnEliminarBombillo").click(function() {
 		confirmButtonColor: '#3085d6',
 		cancelButtonColor: '#d33',
 		cancelButtonText: 'Cancelar',
-		confirmButtonText: 'Si, ¡Borrar categoría!'
+		confirmButtonText: 'Si, ¡Borrar bombillo!'
 
 	}).then(function(result){
 		
