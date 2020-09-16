@@ -79,38 +79,41 @@
 						
 						}else{
 
-							echo'<script>
-	                                     swal.fire({
+							$color="tituloWhite";
+							echo"<script>
 
-	                                          type: "error",
-	                                          title: "¡Su Estado no es Activo!",
-	                                          background: "#343a40",
-	                                          showConfirmButton: true,
-	                                          confirmButtonColor: "#dc3545",
-	                                          confirmButtonText: "Ok",
-	                                          closeOnConfirm: false  
+	                            Swal.fire({
+
+	                                type: 'error',
+	                                html: '<h2 class=".$color.">¡Su Estado no es Activo!</h2>',
+	                                background: '#343a40',
+	                                showConfirmButton: true,
+	                                confirmButtonColor: '#dc3545',
+	                                confirmButtonText: 'Ok',
+	                                closeOnConfirm: false  
 	                                          
 	                                        });
 
-	                              </script>';
+	                              </script>";
 						}
 
 					}else{
 
-						echo'<script>
+						$color="tituloWhite";
+						echo"<script>
                                      swal.fire({
 
-                                          type: "error",
-                                          title: "¡El usuario o contraseña incorrecta!",
-                                          background: "#343a40",
+                                          type: 'error',
+                                          html: '<h3 class=".$color.">¡El usuario o contraseña incorrecta!</h3>',
+                                          background: '#343a40',
                                           showConfirmButton: true,
-                                          confirmButtonColor: "#dc3545",
-                                          confirmButtonText: "Ok",
+                                          confirmButtonColor: '#dc3545',
+                                          confirmButtonText: 'Ok',
                                           closeOnConfirm: false  
                                           
                                         });
 
-                              </script>';  
+                              </script>";  
 					}
 				}
 			}
@@ -211,20 +214,19 @@
 
 	                        if($respuesta == "ok"){
 
+	                        	$color="tituloWhite";
+
 		                        echo "<script>
 		                                    Swal.fire({
 												
 		                                        type: 'success',
-		                                        title: '¡El usuario se ingreso correctamente!',
+		                                        html: '<h3 class=".$color.">¡El usuario se ingreso correctamente!</h3>',
 		                                        background: '#343a40',
 		                                        showConfirmButton: true,
 		                                        confirmButtonColor: '#28a745',
 		                                        confirmButtonText: 'Ok',
-		                                        closeOnConfirm: false,
-		                                        customClass: {
-
-													title: 'title-alert'
-												},
+		                                        closeOnConfirm: false
+		                                        
 
 		                                        }).then((result)=>{
 
@@ -239,12 +241,15 @@
 		                    }
 
 		            }else{
+
+		            	$color="tituloWhite";
+
 	                        echo "<script>
 
 		                            Swal.fire({
 
 		                                type: 'error',
-		                                title: '¡El usuario no puede ir vacio o con carecteres especiales!',
+		                                html: '<h3 class=".$color.">¡El usuario no puede ir vacio o con carecteres especiales!</h3>',
 		                                background: '#343a40',
 		                                showConfirmButton: true,
 		                                confirmButtonColor: '#dc3545',
@@ -371,13 +376,13 @@
 		                    		$encriptar=password_hash($_POST["editarPassword"], PASSWORD_DEFAULT);
 
 		                    	}else{
-
-		                    		 echo "<script>
+		                    		$color="tituloWhite";
+		                    		echo "<script>
 
 			                            Swal.fire({
 
 			                                type: 'error',
-			                                title: '¡La contraseña no puede ir vacio o con carecteres especiales!',
+			                                html: '<h3 class=".$color.">¡La contraseña no puede ir vacio o con carecteres especiales!</h3>',
 			                                background: '#343a40',
 			                                showConfirmButton: true,
 			                                confirmButtonColor: '#dc3545',
@@ -398,11 +403,10 @@
 
 		                    	}
 
-	                    }else {
-				
+	                    }
+						if (empty($encriptar)) {
 							$encriptar = $_POST['passwordActual'];
-
-						}						
+						}
 
 							$datos = array("nombre" => $_POST["editarNombre"],
 				                    		"usuario" => $_POST["editarUsuario"],
@@ -414,11 +418,13 @@
 
 				            if($respuesta == "ok"){
 
+				            			$color="tituloWhite";
+
 					                        echo "<script>
 					                                      Swal.fire({
 
 					                                          type: 'success',
-					                                          title: '¡El usuario se ingreso correctamente!',
+					                                          html: '<h3 class=".$color.">¡El usuario se ingreso correctamente!</h3>',
 					                                          background: '#343a40',
 					                                          showConfirmButton: true,
 					                                          confirmButtonColor: '#28a745',
@@ -439,13 +445,13 @@
 
 			
 				}else{
-
+					$color="tituloWhite";
 					echo "<script>
 
 		                        Swal.fire({
 
 		                            type: 'error',
-		                            title: '¡El nombre no puede ir vacio o con carecteres especiales!',
+		                            html: '<h3 class=".$color.">¡El nombre no puede ir vacio o con carecteres especiales!</h3>',
 		                            background: '#343a40',
 		                            showConfirmButton: true,
 		                            confirmButtonColor: '#dc3545',
@@ -491,11 +497,13 @@
 
 					if ($respuesta == "ok") {
 
+					$color="tituloWhite";
+
 						echo "<script>
 					            Swal.fire({
 
 					                type: 'success',
-					                title: '¡El usuario se a borrado correctamente!,
+					                html: '<h3 class=".$color.">¡El usuario se a borrado correctamente!</h3>',
 					                background: '#343a40',
 					                showConfirmButton: true,
 					                confirmButtonColor: '#28a745',
