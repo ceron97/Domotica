@@ -12,7 +12,12 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title><?php echo $_GET["vista"]; ?></title>
+  <title>
+    
+    <?php 
+      echo $_GET["vista"]; 
+    ?>
+    </title>
 
   <link rel="icon" href="images/icons/casa.png">
 
@@ -140,6 +145,8 @@ if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
 
 <script src="./vistas/js/plantilla.js"></script>
 <script src="./vistas/js/usuario.js"></script>
+
+<script src="./vistas/js/iluminacion.js"></script>
 <!-- <script src="./vistas/js/serviciosP.js"></script> -->
 
 </body>
