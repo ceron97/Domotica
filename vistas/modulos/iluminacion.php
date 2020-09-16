@@ -427,7 +427,6 @@
       </div>
       <!-- /.modal-content -->
     </div>
-<!-- /.modal-dialog -->
-
+    <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
