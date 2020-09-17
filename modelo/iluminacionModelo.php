@@ -68,6 +68,10 @@ class ModeloIluminacion{
 
     }
 
+    /*==============================
+     BORRAR BOMBILLO
+    =============================*/
+
 
     static public function mdlBorrarBombillo($tabla, $id){
         
@@ -88,6 +92,34 @@ class ModeloIluminacion{
         $stmt->close();
 
         $stmt=null;
+
+    }
+
+    /*=================================================
+	    EDITAR BOMBILLO
+    ================================================*/
+
+    static public function mdlEditarBombillo($tabla, $datos){
+        
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre WHERE id_bombillo = :id_bombillo");
+
+        $stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+        
+        $stmt->bindParam(":id_bombillo", $datos["id_bombillo"], PDO::PARAM_INT);
+
+        if ($stmt->execute()) {
+    		
+    		return "ok";
+
+    	} else {
+
+    		return "error";
+
+    	}
+
+    	$stmt->close();
+
+		$stmt=null;
 
     }
 

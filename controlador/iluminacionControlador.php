@@ -129,4 +129,74 @@ class ControladorIluminacion{
 
     }
 
+    /*=================================================
+	    EDITAR BOMBILLO
+    ================================================*/
+    
+    static public function ctrEditarBombillo(){
+
+        if (isset($_POST["editarNombre"])) {
+            
+            if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarNombre"])) {
+                
+                $tabla = "iluminacion";
+
+                $datos = array("nombre" => $_POST["editarNombre"],
+                                "id_bombillo" => $_POST["idBombillo"]);
+
+                $respuesta = ModeloIluminacion::mdlEditarBombillo($tabla, $datos);
+
+                if ($respuesta == "ok") {
+                    
+                    echo "<script>
+
+    					Swal.fire({
+
+    							icon: 'success',
+    							title: 'Datos correctos',
+    							text: '!El bombillo ha sido editado exitosamente¡',
+
+    						}).then((result)=>{
+
+    							if(result.value){
+
+    								window.location = 'iluminacion';
+
+    							}
+
+    						})
+
+    				</script>";
+
+                }
+
+            }else{
+
+                echo "<script>
+
+    					Swal.fire({
+
+    							icon: 'error',
+    							title: 'Datos invalidos',
+    							text: '!El bombillo esta vacio o contiene caracteres especiales, y esto no esta permitido¡',
+    							footer: 'Intentalo nuevamente'
+
+    						}).then((result)=>{
+
+    							if(result.value){
+
+    								window.location = 'iluminacion';
+
+    							}
+
+    						})
+
+    				</script>";
+
+            }
+
+        }
+
+    }
+
 }

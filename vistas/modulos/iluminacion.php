@@ -207,7 +207,7 @@
                           <input type="range" class="custom-range" id="customRange1" style="width: 300px">
                         </button>
 
-                        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modalEditarBombillo">
+                        <button class="btn btn-outline-warning btnEditarBombillo" idBombillo="'.$value["id_bombillo"].'" data-toggle="modal" data-target="#modalEditarBombillo">
                           <i class="fas fa-pencil-alt"></i>
                         </button>
 
@@ -248,7 +248,7 @@
   <!-- /.content-wrapper -->
 
  <!--================================
-    MODAL AGREGAR CATEGORIA
+    MODAL AGREGAR BOMBILLO
   =================================-->
 
 <div class="modal fade" id="modalAgregarBombillo">
@@ -433,6 +433,100 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+</div>
+
+<!--================================
+    MODAL EDITAR BOMBILLO
+  =================================-->
+
+<div class="modal fade" id="modalEditarBombillo">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <form role="form" method="post">
+
+        <!--================================
+            CABEZA DEL MODAL
+          =================================-->
+
+        <div class="modal-header"  style="background: #ff851b; color: white">
+
+          <h4 class="modal-title">Editar Bombillo</h4>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+
+          </button>
+
+        </div>
+
+        <!--================================
+            CUERPO DEL MODAL
+          =================================-->
+
+        <div class="modal-body">
+
+          <div class="box-body">
+
+            <!-- ENTREDA PARA EL NOMBRE -->
+
+            <label for="editarBombillo">Escribe el nuevo nombre</label>
+
+            <div class="form-group">
+            
+              <div class="input-group mb-3">
+
+                <div class="input-group-prepend">
+
+                  <span class="input-group-text"><i class="fas fa-lightbulb"></i></span>
+
+                </div>
+
+                <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" required>
+
+                <input type="hidden" name="idBombillo" id="idBombillo" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--================================
+            FOOTER DEL MODAL
+          =================================-->
+
+        <div class="modal-footer justify-content-between">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+
+        </div>
+
+        <?php
+
+          $editarBombillo = new ControladorIluminacion();
+
+          $editarBombillo -> ctrEditarBombillo();
+
+        ?> 
+
+      </form>
+
+    </div>
+    <!-- /.modal-content -->
+  </div>
+<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 <?php
 
    $borrarBombillo = new ControladorIluminacion();
