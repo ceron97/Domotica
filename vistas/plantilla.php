@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>
-    
+
     <?php 
       echo $_GET["vista"]; 
     ?>
@@ -41,9 +41,6 @@
   <link rel="stylesheet" href="vistas/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="vistas/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-  <!-- sweetalert 2 theme dark -->
-  <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
-
   <!-- Bootstrap Color Picker -->
   <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
 
@@ -66,8 +63,6 @@
   <script src="vistas/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <!-- SweetAlert2 -->
   <script src="vistas/plugins/sweetalert2/sweetalert2.min.js"></script>
-  <!-- sweetalert 2 theme dark -->
-  <script src="sweetalert2/dist/sweetalert2.min.js"></script>
 
   <!-- bootstrap color picker -->
   <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
