@@ -89,4 +89,44 @@ class ControladorIluminacion{
 
     }
 
+
+    static public function ctrBorrarBombillo(){
+        
+        if (isset($_GET["idBombillo"])) {
+            
+            $tabla = "iluminacion";
+
+            $id = $_GET["idBombillo"];
+
+             $respuesta = ModeloIluminacion::mdlBorrarBombillo($tabla, $id);
+            
+
+            if ($respuesta == "ok") {
+                
+                echo "<script>
+
+    					Swal.fire({
+
+    							icon: 'success',
+    							title: 'Datos correctos',
+    							text: '!El bombillo ha sido borrada exitosamente¡',
+
+    						}).then((result)=>{
+
+    							if(result.value){
+
+    								window.location = 'iluminacion';
+
+    							}
+
+    						})
+
+    				</script>";
+
+            }
+
+        }
+
+    }
+
 }

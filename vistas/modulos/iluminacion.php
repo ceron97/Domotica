@@ -211,7 +211,8 @@
                           <i class="fas fa-pencil-alt"></i>
                         </button>
 
-                        <button class="btn btn-outline-danger btnEliminarBombillo">
+
+                        <button class="btn btn-outline-danger btnEliminarBombillo" idBombillo="'.$value["id_bombillo"].'">
                           <i class="fa fa-times"></i>
                         </button>
 
@@ -224,6 +225,8 @@
                   }
 
                 ?>
+
+                
 
               </tbody>
 
@@ -431,3 +434,10 @@
 
 </div>
 <!-- /.modal -->
+<?php
+
+   $borrarBombillo = new ControladorIluminacion();
+
+   $borrarBombillo -> ctrBorrarBombillo();
+
+?>
