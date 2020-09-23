@@ -21,3 +21,22 @@
 	  (3, 'German', '55c°', '66', '10'),
 	  (5, 'oscar', '25c°', '25%', '25%');
 	/*!40000 ALTER TABLE `temp_habitaciones` ENABLE KEYS */;
+
+
+	#script de la tabla iluminacion
+	-- Volcando estructura para tabla domotica.iluminacion
+	CREATE TABLE IF NOT EXISTS `iluminacion` (
+ 	 `id_bombillo` int(11) NOT NULL AUTO_INCREMENT,
+ 	 `nombre` varchar(50) DEFAULT NULL,
+  	`encendido` int(11) DEFAULT NULL,
+ 	 `color` varchar(50) DEFAULT NULL,
+ 	 `intensidad` int(11) DEFAULT NULL,
+ 	 `estado` int(11) DEFAULT NULL,
+ 	 PRIMARY KEY (`id_bombillo`)
+	) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+	-- Volcando datos para la tabla domotica.iluminacion: ~1 rows (aproximadamente)
+	/*!40000 ALTER TABLE `iluminacion` DISABLE KEYS */;
+	INSERT INTO `iluminacion` (`id_bombillo`, `nombre`, `encendido`, `color`, `intensidad`, `estado`) VALUES
+	(3, 'habitacion mia', 1, '#c41717', 9, 0);
+	/*!40000 ALTER TABLE `iluminacion` ENABLE KEYS */;
