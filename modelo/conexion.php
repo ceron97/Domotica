@@ -5,7 +5,7 @@
 	{
 		static public function conectar(){
 			
-			$link = new PDO("mysql:host=localhost;dbname=pos","developer","developer");
+			$link = new PDO("mysql:host=localhost;dbname=domotica","root","");
 
 			$link->exec("set names utf8");
 
