@@ -26,6 +26,8 @@
 	require_once "./modelo/usuarioModelo.php";
 	require_once "./modelo/iluminacionModelo.php";
 
+
+
 	$plantilla = new PlantillaControlador();
 
 	$plantilla -> ctrPlantilla();
