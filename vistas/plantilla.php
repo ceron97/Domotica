@@ -37,7 +37,7 @@
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="vistas/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- sweetalert 2 theme dark -->
-  <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+  <!-- <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css"> -->
 
 
   <!-- =============================================================
@@ -59,7 +59,7 @@
   <!-- SweetAlert2 -->
   <script src="vistas/plugins/sweetalert2/sweetalert2.min.js"></script>
   <!-- sweetalert 2 theme dark -->
-  <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script> -->
 
 
 
