@@ -400,7 +400,6 @@
 
 		                    	}
 
-<<<<<<< HEAD
 	                    }	
 							//si no se realizo el cambio de contraseña
 							//se asignara la contraseña antigua
@@ -409,12 +408,6 @@
 								$encriptar = $_POST['passwordActual'];
 
 							}					
-=======
-	                    }
-						if (empty($encriptar)) {
-							$encriptar = $_POST['passwordActual'];
-						}
->>>>>>> ventanas
 
 							$datos = array("nombre" => $_POST["editarNombre"],
 				                    		"usuario" => $_POST["editarUsuario"],
