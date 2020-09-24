@@ -12,7 +12,30 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title><?php echo $_GET["vista"]; ?></title>
+  <title><?php 
+
+      if (isset($_SESSION["iniciarSesion"]) 
+          && $_SESSION["iniciarSesion"] == "ok") {
+          if (isset($_GET["vista"])) {
+
+              $cadena_devuelta = ucfirst($_GET["vista"]);//Asigna la primera letra en mayuscula
+              
+              //$resultado2 = str_replace("-", " ", $cadena_devuelta);
+
+              echo $cadena_devuelta." - Domotica";
+
+          }else{
+          //si no existe una ruta se le asigna un nombre a la pagina
+
+              echo 'Inicio - Domotica';
+
+          }
+      }else{
+        echo 'Login - Domotica';
+      }
+    ?>
+      
+  </title>
 
   <link rel="icon" href="images/icons/casa.png">
 
@@ -74,7 +97,10 @@
 <?php 
 
 if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
-  
+
+  //Llama a un controlador que actualiza las variables de sesión
+  $editarSession = new usuariosControlador();
+  $editarSession -> ctrActualizarSession();
   
   echo '<div class="wrapper">';
 

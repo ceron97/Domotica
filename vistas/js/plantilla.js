@@ -29,3 +29,25 @@ $(".tablas").DataTable({
 
 $(".paginate_page").text("Página");
 $(".paginate_of").text($(".paginate_of").text().replace("of","de"));
+
+window.addEventListener("load",function() {
+  
+        //oculta la barra de navegación de dispositivos moviles
+        setTimeout(function(){
+            window.scrollTo(0, 1);
+          }, 0);
+
+
+        //Permite que muestre la seleccion de la pagina actual
+        var url = window.location;
+
+        // treeview
+        $('ul.nav-treeview a').filter(function() {
+                return this.href == url;
+        }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
+
+        // sidebar menu pero no afecta treeview
+        $('ul.nav-sidebar a').filter(function() {
+                return this.href == url;
+        }).addClass('active');
+});

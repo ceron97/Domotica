@@ -151,7 +151,7 @@
 
       
 
-        <div class="card-footer"style="background: #343a40; color:#fff;">
+        <div class="card-footer" style="background: #343a40; color:#fff;">
           Footer
         </div>
 
