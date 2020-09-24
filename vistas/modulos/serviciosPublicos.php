@@ -33,6 +33,7 @@
 
 
     <!-- Main content -->
+    <!-- Main content -->
     <section class="content">
 
       <!-- Default box -->
@@ -40,112 +41,25 @@
 
         <div class="card-header" style="background: #343a40; color:#fff;">
 
-          <h3 class="card-title">Servicios Publicos</h3>
+          <h3 class="card-title">Servicios</h3>
 
           <div class="card-tools">
 
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
 
-            <i class="fas fa-minus"></i></button>           
+              <i class="fas fa-minus"></i></button>
+
+            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+
+              <i class="fas fa-times"></i></button>
 
           </div>
 
         </div>
 
         <div class="card-body" style="background: #6c757d; color:#fff;">
-          <div class="row">
 
-            <!-- =============================================
-              =            GAS           =
-              ============================================= -->
-                <div class="col-lg-4">
-
-                   <div class="card card-danger card-outline">
-
-                      <div class="card-header">
-
-                        <h3 class="card-title">
-
-                          <i class="fas fa-fire"></i>
-
-                          Información de Gas
-
-                        </h3>
-
-                      </div><!-- fin de encabezado de la cabeza -->
-
-                    </div><!-- fin de la tarjeta -->
-
-                    <div class="card-body">
-
-                      <div id="interactive-g" style="height: 300px;"></div>
-
-                    </div>
-
-                </div>
-                <!-- fin grafica de gas -->
-
-              <!-- =============================================
-              =           AGUA          =
-              ============================================= -->
-                <div class="col-lg-4">
-
-                   <div class="card card-primary card-outline">
-
-                      <div class="card-header">
-
-                        <h3 class="card-title">
-
-                          <i class="fas fa-tint"></i>
-
-                          Información de Agua
-
-                        </h3>
-
-                      </div><!-- fin de encabezado de la cabeza -->
-
-                    </div><!-- fin de la tarjeta -->
-
-                    <div class="card-body">
-
-                      <div id="interactive" style="height: 300px;"></div>
-
-                    </div>
-
-                </div>
-                <!-- fin grafica de agua -->
-
-              <!-- =============================================
-              =            ENERGIA           =
-              ============================================= -->
-                <div class="col-lg-4">
-
-                   <div class="card card-warning card-outline">
-
-                      <div class="card-header">
-
-                        <h3 class="card-title">
-
-                          <i class="fas fa-bolt"></i>
-
-                          Información de Energia
-
-                        </h3>
-
-                      </div><!-- fin de encabezado de la cabeza -->
-
-                    </div><!-- fin de la tarjeta -->
-
-                    <div class="card-body">
-
-                      <div id="interactive-e" style="height: 300px;"></div>
-
-                    </div>
-
-                </div>
-                <!-- fin grafica de energia -->
-
-          </div>
+          Start creating your amazing application!
 
         </div>
 

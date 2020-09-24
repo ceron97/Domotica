@@ -61,6 +61,8 @@
   <link rel="stylesheet" href="vistas/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- sweetalert 2 theme dark -->
   <!-- <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css"> -->
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
 
 
   <!-- =============================================================
@@ -85,7 +87,13 @@
   <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script> -->
 
 
+  <!-- bootstrap color picker -->
+  <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="vistas/plugins/chart.js/Chart.js"></script>
+  <script src="vistas/dist/js/demo.js"></script>
+  <script src="vistas/dist/js/pages/dashboard3.js"></script>
 
 
 </head>
@@ -158,6 +166,8 @@ if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
 
 <script src="./vistas/js/plantilla.js"></script>
 <script src="./vistas/js/usuario.js"></script>
+
+<script src="./vistas/js/iluminacion.js"></script>
 <!-- <script src="./vistas/js/serviciosP.js"></script> -->
 
 </body>

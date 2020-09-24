@@ -1,0 +1,42 @@
+# actualizacion en base de datos (scripts)
+
+# script de la tabla de temperatura
+	-- Volcando estructura para tabla pos.temp_habitaciones
+	CREATE TABLE IF NOT EXISTS `temp_habitaciones` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `nombre` varchar(50) DEFAULT NULL,
+	  `temp` varchar(50) DEFAULT NULL,
+	  `hum` varchar(50) DEFAULT NULL,
+	  `tvo` varchar(50) DEFAULT NULL,
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+	# se crean datos de ejemplo.
+
+	-- Volcando datos para la tabla pos.temp_habitaciones: ~5 rows (aproximadamente)
+	/*!40000 ALTER TABLE `temp_habitaciones` DISABLE KEYS */;
+	INSERT INTO `temp_habitaciones` (`id`, `nombre`, `temp`, `hum`, `tvo`) VALUES
+	  (1, 'Fabian', '20c°', '15', '12'),
+	  (2, 'Chile', '25c°', '16', '8'),
+	  (3, 'German', '55c°', '66', '10'),
+	  (5, 'oscar', '25c°', '25%', '25%');
+	/*!40000 ALTER TABLE `temp_habitaciones` ENABLE KEYS */;
+
+
+	#script de la tabla iluminacion
+	-- Volcando estructura para tabla domotica.iluminacion
+	CREATE TABLE IF NOT EXISTS `iluminacion` (
+ 	 `id_bombillo` int(11) NOT NULL AUTO_INCREMENT,
+ 	 `nombre` varchar(50) DEFAULT NULL,
+  	`encendido` int(11) DEFAULT NULL,
+ 	 `color` varchar(50) DEFAULT NULL,
+ 	 `intensidad` int(11) DEFAULT NULL,
+ 	 `estado` int(11) DEFAULT NULL,
+ 	 PRIMARY KEY (`id_bombillo`)
+	) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+	-- Volcando datos para la tabla domotica.iluminacion: ~1 rows (aproximadamente)
+	/*!40000 ALTER TABLE `iluminacion` DISABLE KEYS */;
+	INSERT INTO `iluminacion` (`id_bombillo`, `nombre`, `encendido`, `color`, `intensidad`, `estado`) VALUES
+	(3, 'habitacion mia', 1, '#c41717', 9, 0);
+	/*!40000 ALTER TABLE `iluminacion` ENABLE KEYS */;

@@ -18,7 +18,7 @@
 
               <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
 
-              <li class="breadcrumb-item active" style="color:white;">Puerta</li>
+              <li class="breadcrumb-item active" style="color:white;">Puertas</li>
 
             </ol>
 
