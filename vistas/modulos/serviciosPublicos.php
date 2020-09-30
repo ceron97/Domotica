@@ -19,197 +19,285 @@
   =           LOS CARDS          =
   =============================================*/ -->
   <section class="content">
-    <div class="row" align="center">
-      <!-- /*=============================================
-      =            TARJETA DEL GAS            =
-      =============================================*/ -->
-      <div class="col-md-4 col-4 hiddenGasCont" hidden>
-        <!-- small card -->
-        <div class="small-box bg-danger">
-          <div class="inner">
-            <h3>40<sup style="font-size: 20px">%</sup></h3>
-            <span>Consumo del Gas</span>
-          </div>
-          <div class="icon">
-            <i class="fas fa-fire"></i>
-          </div>
-            <a href="#" class="small-box-footer" onclick="gas();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickGas"></i></a>
-        </div>
-      </div>
-      <!-- /*=============================================
-        =            TARJETA DEL AGUA            =
+      
+      <div class="row" align="center">
+        <!-- /*=============================================
+        =            TARJETA DEL GAS            =
         =============================================*/ -->
-      <div class="col-md-4 col-4 hiddenAguaCont" hidden>
-        <!-- small card -->
-        <div class="small-box bg-primary">
-          <div class="inner">
-            <h3>60<sup style="font-size: 20px">%</sup></h3>
-            <span>Consumo del Agua</span>
-          </div>
-          <div class="icon">
-            <i class="fas fa-tint" ></i>
-          </div>
-          <a href="#" class="small-box-footer" onclick="agua();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickAgua"></i></a>
-        </div>
+            
+            <div class="col-md-4 col-12 ">
+
+                <!-- small card -->
+                <div class="small-box bg-danger hiddenGasCont" hidden>
+
+                  <div class="inner">
+
+                    <h3>40<sup style="font-size: 20px">%</sup></h3>
+
+                    <span>Consumo del Gas</span>
+
+                  </div>
+
+                    <div class="icon">
+
+                      <i class="fas fa-fire"></i>
+
+                    </div>
+
+                    <a href="#" class="small-box-footer" onclick="gas();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickGas"></i></a>
+
+
+                </div>
+
+                <button hidden class="btn btn-danger hiddenGasButton" data-toggle="modal" data-target="#modalCrearDatosGas"><i class="fas fa-fire" style="color: #fff;"></i>  Crear datos del gas</button>
+
+            </div>
+
+            <br>
+
+          <!-- /*=============================================
+            =            TARJETA DEL AGUA            =
+            =============================================*/ -->
+
+            <div class="col-md-4 col-12">
+
+                <!-- small card -->
+                <div class="small-box bg-primary hiddenAguaCont" hidden>
+
+                  <div class="inner">
+
+                    <h3>60<sup style="font-size: 20px">%</sup></h3>
+
+                    <span>Consumo del Agua</span>
+
+                  </div>
+
+                  <div class="icon">
+
+                    <i class="fas fa-tint" ></i>
+
+                  </div>
+
+                  <a href="#" class="small-box-footer" onclick="agua();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickAgua"></i></a>
+
+                </div>
+
+                <button hidden class="btn btn-primary hiddenAguaButton" data-toggle="modal" data-target="#modalCrearDatosAgua"><i class="fas fa-tint" style="color: #fff;"></i>  Crear datos del Agua</button>
+
+            </div>
+
+
+          <!-- =============================================
+                  =          TARJETAS ENERGIA         =
+            ============================================= -->
+
+            <div class="col-md-4 col-12">
+
+                <!-- small card -->
+                <div class="small-box bg-warning hiddenEnergiaCont" hidden>
+
+                  <div class="inner">
+
+                    <h3>55<sup style="font-size: 20px">%</sup></h3>
+
+                    <span>Consumo de la Energia</span>
+
+                  </div>
+
+                  <div class="icon">
+
+                    <i class="fas fa-bolt"></i>
+
+                  </div>
+
+                  <a href="#" class="small-box-footer" onclick="energia();">Mas informacion<i class="fas fa-arrow-circle-right" id="clickEnergia"></i></a>
+
+                </div>
+
+                <button hidden class="btn btn-warning hiddenEnergiaButton" data-toggle="modal" data-target="#modalCrearDatosEnergia"><i class="fas fa-bolt" style="color: #fff;"></i>  Crear datos de la energia</button>
+
+            </div>
+
+
+       </div>
+
+       
+
+             <!-- =============================================
+                 =            DIAGRAM DE LINEAS DEL GAS           =
+            ============================================= -->
+            <section id="infoGas" class="hiddenGasCont" hidden>
+
+                <div class="col-lg-12">
+
+                    <div class="card card-danger card-outline">
+
+                      <div class="card-header" style="background: #343a40;">
+
+                          <h3 class="card-title">
+
+                            <i class="fas fa-fire" style="color:#FE2A4A;"></i>
+
+                              Información de Gas
+
+                          </h3>
+
+                      </div><!-- fin de encabezado de la cabeza -->
+
+                    </div><!-- fin de la tarjeta -->
+
+                    <div class="card-body">
+
+                      <div id="interactive-g" style="height: 300px;"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- =============================================
+                 =            BOTON CON MAS INFO DEL GAS           =
+                ============================================= -->
+                <div class="card-footer"style="background: #343a40; color:#fff;">
+                  <?php 
+                    $tabla = "datos_gas";
+                    $item = null;
+                    $valor = null;
+
+                    $modificarGas = ServiciosControlador::ctrMostrar($tabla ,$item, $valor);
+
+                    foreach ($modificarGas as $key => $value) { 
+                      echo'
+
+                        <button class="btn btn-secondary " data-toggle="modal" data-target="#modalTablaGas" style="background-color: #FE2A4A;"><i class="fas fa-table" style="color: #000;"></i></button>
+
+                        <button style="position:absolute; right:0;" class="btn btn-secondary btnEditarGas"  idServicioGas="'.$value["idGas"].'" data-toggle="modal" data-target="#modalModificarDatosGas"><i class="fas fa-address-card" style="color: #fff;"></i></button>
+
+                      ';
+                    }
+                  ?>
+                </div>
+            </section>
+            
+            <!-- =============================================
+              =            DIAGRAMA DE LINEAS DEL AGUA          =
+            ============================================= -->
+            <section id="infoAgua" class="hiddenAguaCont" hidden>
+              
+              <div class="col-lg-12">
+
+                  <div class="card card-primary card-outline">
+
+                    <div class="card-header" style="background: #343a40;">
+
+                      <h3 class="card-title">
+
+                        <i class="fas fa-tint" style="color:#2A50FE;"></i>
+
+                          Información del Agua
+
+                      </h3>
+
+                    </div><!-- fin de encabezado de la cabeza -->
+
+                  </div><!-- fin de la tarjeta -->
+
+                  <div class="card-body">
+
+                    <div id="interactive" style="height: 300px;"></div>
+
+                  </div>
+
+              </div>
+
+              <!-- =============================================
+                 =            BOTON CON MAS INFO DEL AGUA          =
+                ============================================= -->
+              <div class="card-footer"style="background: #343a40;color:#fff;">
+                
+                      
+                          <button class="btn btn-secondary " data-toggle="modal" data-target="#modalTablaAgua" style="background-color:#2A50FE;"><i class="fas fa-table" style="color:#000;"></i></button>
+
+                      <?php 
+                        $tabla = "datos_Agua";
+                        $item = null;
+                        $valor = null;
+
+                        $modificarAgua = ServiciosControlador::ctrMostrar($tabla ,$item, $valor);
+
+                          foreach ($modificarAgua as $key => $value) { 
+                            echo'<button style="position:absolute; right:0;" class="btn btn-secondary btnEditarAgua"  idServicioAgua="'.$value["idAgua"].'" data-toggle="modal" data-target="#modalModificarDatosAgua"><i class="fas fa-address-card" style="color: #fff;"></i></button>';
+                          }
+                      ?>
+              </div>
+
+            </section>
+            
+            <!-- =============================================
+              =            DIAGRAMA DE LINEAS DE LA ENERGIA        =
+            ============================================= -->
+
+            <section id="infoEnergia" class="hiddenEnergiaCont" hidden>
+              
+              <!-- =============================================
+                  =            DIAGRAM DE LINEAS DE LA ENERGIA           =
+                  ============================================= -->
+                <div class="col-lg-12">
+
+                    <div class="card card-warning card-outline">
+
+                      <div class="card-header" style="background: #343a40;">
+
+                        <h3 class="card-title">
+
+                          <i class="fas fa-bolt" style="color:#FCCF19;"></i>
+
+                            Información de la Energia
+
+                        </h3>
+
+                      </div><!-- fin de encabezado de la cabeza -->
+
+                    </div><!-- fin de la tarjeta -->
+
+                    <div class="card-body">
+
+                        <div id="interactive-e" style="height: 300px;"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- =============================================
+                 =            BOTON CON MAS INFO DEL ENERGIA         =
+                ============================================= -->
+                <div class="card-footer"style="background: #343a40; color:#fff;">
+                  <?php 
+                    $tabla = "datos_Energia";
+                    $item = null;
+                    $valor = null;
+
+                    $modificarEnergia = ServiciosControlador::ctrMostrar($tabla ,$item, $valor);
+
+                    foreach ($modificarEnergia as $key => $value) { 
+                      echo'
+
+                      <button class="btn btn-secondary " data-toggle="modal" data-target="#modalTablaEnergy" style="background-color:#FCCF19;"><i class="fas fa-table" style="color:#000;"></i></button>
+
+                      <button style="position:absolute; right:0;" class="btn btn-secondary btnEditarEnergia"  idServicioEnergia="'.$value["idEnergia"].'" data-toggle="modal" data-target="#modalModificarDatosEnergia"><i class="fas fa-address-card" style="color: #fff;"></i></button>';
+                    }
+                  ?>
+                </div>
+            </section>
+
+       
+        <!-- /*=============================================
+        =           FIN DEL CARD DEL ENERGIA          =
+        =============================================*/ -->
+
       </div>
-      <!-- =============================================
-              =          TARJETAS ENERGIA         =
-        ============================================= -->
-      <div class="col-md-4 col-4 hiddenEnergiaCont" hidden>
-        <!-- small card -->
-        <div class="small-box bg-warning">
-          <div class="inner">
-            <h3>55<sup style="font-size: 20px">%</sup></h3>
-            <span>Consumo de la Energia</span>
-          </div>
-          <div class="icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <a href="#" class="small-box-footer" onclick="energia();">Mas informacion<i class="fas fa-arrow-circle-right" id="clickEnergia"></i></a>
-        </div>
-      </div>
-    </div>
 
-    <!-- Botones para crear los servicios de agua, gas, energia -->
-    <section class="">
-      <div class="container ">
-        <div class="row" align="center">
-          <div class="col-md-4 col-4">
-            <button class="btn btn-danger hiddenGasButton" data-toggle="modal" data-target="#modalCrearDatosGas"><i class="fas fa-fire" style="color: #fff;"></i>  Crear datos del gas</button>
-          </div>
-
-          <div class="col-md-4 col-4">
-            <button class="btn btn-primary hiddenAguaButton" data-toggle="modal" data-target="#modalCrearDatosAgua"><i class="fas fa-tint" style="color: #fff;"></i>  Crear datos del Agua</button>
-          </div>
-
-          <div class="col-md-4 col-4">
-            <button class="btn btn-warning hiddenEnergiaButton" data-toggle="modal" data-target="#modalCrearDatosEnergia"><i class="fas fa-bolt" style="color: #fff;"></i>  Crear datos de la energia</button>
-          </div>
-
-        </div>
-      </div>
-      <br>
-    </section>
-
-    <!-- =============================================
-        =  DIAGRAM DE LINEAS DEL GAS           =
-    ============================================= -->
-    <section id="infoGas" class="hiddenGasCont" hidden>
-      <div class="col-lg-12">
-        <div class="card card-danger card-outline">
-          <div class="card-header" style="background: #343a40;">
-            <h3 class="card-title">
-              <i class="fas fa-fire" style="color:#FE2A4A;"></i>
-              Información de Gas
-            </h3>
-          </div><!-- fin de encabezado de la cabeza -->
-        </div><!-- fin de la tarjeta -->
-        <div class="card-body">
-          <div id="interactive-g" style="height: 300px;"></div>
-        </div>
-      </div>
-      <!-- =============================================
-       =  BOTON CON MAS INFO DEL GAS           =
-      ============================================= -->
-      <?php 
-        $tabla = "datos_gas";
-        $item = null;
-        $valor = null;
-
-        $modificarGas = ServiciosControlador::ctrMostrar($tabla ,$item, $valor);
-
-        foreach ($modificarGas as $key => $value) { 
-          echo'<div class="card-footer"style="background: #343a40; color:#fff;">
-
-            <button class="btn btn-secondary " data-toggle="modal" data-target="#modalTablaGas" style="background-color: #FE2A4A;"><i class="fas fa-table" style="color: #000;"></i></button>
-
-            <button style="position:absolute; right:0;" class="btn btn-secondary btnEditarGas"  idServicioGas="'.$value["idGas"].'" data-toggle="modal" data-target="#modalModificarDatosGas"><i class="fas fa-address-card" style="color: #fff;"></i></button>
-
-          </div>';
-        }
-      ?>
-    </section>
-    <!-- =============================================
-      =  DIAGRAMA DE LINEAS DEL AGUA          =
-    ============================================= -->
-    <section id="infoAgua" class="hiddenAguaCont" hidden>
-      <div class="col-lg-12">
-        <div class="card card-primary card-outline">
-          <div class="card-header" style="background: #343a40;">
-            <h3 class="card-title">
-              <i class="fas fa-tint" style="color:#2A50FE;"></i>
-              Información del Agua
-            </h3>
-          </div><!-- fin de encabezado de la cabeza -->
-        </div><!-- fin de la tarjeta -->
-        <div class="card-body">
-          <div id="interactive" style="height: 300px;"></div>
-        </div>
-      </div>
-      <!-- =============================================
-       =  BOTON CON MAS INFO DEL AGUA          =
-      ============================================= -->
-      <?php 
-        $tabla = "datos_Agua";
-        $item = null;
-        $valor = null;
-
-        $modificarAgua = ServiciosControlador::ctrMostrar($tabla ,$item, $valor);
-
-        foreach ($modificarAgua as $key => $value) { 
-          echo'<div class="card-footer"style="background: #343a40; color:#fff;">
-            <button class="btn btn-secondary " data-toggle="modal" data-target="#modalTablaAgua" style="background-color:#2A50FE;"><i class="fas fa-table" style="color:#000;"></i></button>
-
-            <button style="position:absolute; right:0;" class="btn btn-secondary btnEditarAgua"  idServicioAgua="'.$value["idAgua"].'" data-toggle="modal" data-target="#modalModificarDatosAgua"><i class="fas fa-address-card" style="color: #fff;"></i></button>
-          </div>';
-        }
-      ?>
-    <section>
-      <!-- =============================================
-        =  DIAGRAMA DE LINEAS DE LA ENERGIA        =
-      ============================================= -->
-      <section id="infoEnergia" class="hiddenEnergiaCont" hidden>
-        <!-- =============================================
-        =  DIAGRAM DE LINEAS DE LA ENERGIA           =
-        ============================================= -->
-        <div class="col-lg-12">
-          <div class="card card-warning card-outline">
-            <div class="card-header" style="background: #343a40;">
-              <h3 class="card-title">
-                <i class="fas fa-bolt" style="color:#FCCF19;"></i>
-                Información de la Energia
-              </h3>
-            </div><!-- fin de encabezado de la cabeza -->
-          </div><!-- fin de la tarjeta -->
-          <div class="card-body">
-            <div id="interactive-e" style="height: 300px;"></div>
-          </div>
-        </div>
-        <!-- =============================================
-        =    BOTON CON MAS INFO DEL ENERGIA         =
-        ============================================= -->
-        <?php 
-          $tabla = "datos_Energia";
-          $item = null;
-          $valor = null;
-
-          $modificarEnergia = ServiciosControlador::ctrMostrar($tabla ,$item, $valor);
-
-          foreach ($modificarEnergia as $key => $value) { 
-            echo'<div class="card-footer"style="background: #343a40; color:#fff;">
-              <button class="btn btn-secondary " data-toggle="modal" data-target="#modalTablaEnergy" style="background-color:#FCCF19;"><i class="fas fa-table" style="color:#000;"></i></button>
-
-              <button style="position:absolute; right:0;" class="btn btn-secondary btnEditarEnergia"  idServicioEnergia="'.$value["idEnergia"].'" data-toggle="modal" data-target="#modalModificarDatosEnergia"><i class="fas fa-address-card" style="color: #fff;"></i></button>
-            </div>';
-          }
-        ?>
-      </section>
-    </section>
-    <!-- /*=============================================
-    =     FIN DEL CARD DEL ENERGIA          =
-    =============================================*/ -->
   </section>
-</div>
+
 <!-- /.content-wrapper -->
 <!--  ================================================================
     Modal VER TABLA DE ENERGIA
@@ -245,7 +333,7 @@
                       </div>
                       <input type="text" class="form-control float-right" id="reservation-e">
                     </div>
-                    <!-- /.input group -->
+                    
                   </div>
                 </div>
               <div class="col-md-4"></div>
@@ -906,6 +994,7 @@
               </div>
             </div>
           </div>
+          
 
             <!--  ================================================================
               MODIFICAR tarifa Alcantarillado complementario
@@ -1038,8 +1127,8 @@ Modal MODIFICAR Datos Energia
           <!--  ================================================================
               MODIFICAR tarifa Energia
           =================================================================  --> 
-           <div class="box-body">
-             <div class="form-group">
+          <div class="box-body">
+            <div class="form-group">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
