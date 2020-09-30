@@ -101,11 +101,19 @@ session_start();
   <script src="vistas/dist/js/pages/dashboard3.js"></script>
 
   <!-- jquery flot -->
-  <!-- <script src="vistas/plugins/flot/jquery.flot.js"></script> -->
+  <script src="vistas/plugins/flot/jquery.flot.js"></script>
   <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-  <!-- <script src="vistas/plugins/flot-old/jquery.flot.resize.min.js"></script> -->
+  <script src="vistas/plugins/flot-old/jquery.flot.resize.min.js"></script>
   <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-  <!-- <script src="vistas/plugins/flot-old/jquery.flot.pie.min.js"></script> -->
+  <script src="vistas/plugins/flot-old/jquery.flot.pie.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="vistas/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="vistas/plugins/moment/moment.min.js"></script>
+  <script src="vistas/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Summernote -->
+  <script src="vistas/plugins/summernote/summernote-bs4.min.js"></script>
+  
 
   <!-- Selected2 -->
   <script src="vistas/plugins/select2/js/select2.full.min.js"></script>
