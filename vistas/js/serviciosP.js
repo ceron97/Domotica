@@ -432,27 +432,26 @@ $(".card-energia").on("click", ".btnImprimirFactura" ,function(){
 })
 
 // filtro de fecha del gas
-// $(function () {
+$(function () {
     //Date range picker
-  // $('#reservation-1').daterangepicker()
+  $('#reservation-1').daterangepicker()
     //Date range picker with time picker  
-// })
+})
 
   // filtro de fecha del agua
-// $(function () {
+$(function () {
     //Date range picker
-  // $('#reservation-2').daterangepicker()
+  $('#reservation-2').daterangepicker()
     //Date range picker with time picker  
-//  })
+ })
 
 
   // filtro de fecha de la energia
-// $(function () {
+$(function () {
     //Date range picker
-  // $('#reservation-e').daterangepicker()
+  $('#reservation-e').daterangepicker()
     //Date range picker with time picker  
-// })
-
+})
 /*=============================================
 =            EDITAR GAS           =
 =============================================*/

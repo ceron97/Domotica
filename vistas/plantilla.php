@@ -64,6 +64,8 @@ session_start();
   <!-- <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css"> -->
   <!-- Bootstrap Color Picker -->
   <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="vistas/plugins/daterangepicker/daterangepicker.css">
   
   <!-- Selected2 -->
   <link rel="stylesheet" href="vistas/plugins/select2/css/select2.min.css">
@@ -113,8 +115,6 @@ session_start();
   <script src="vistas/plugins/daterangepicker/daterangepicker.js"></script>
   <!-- Summernote -->
   <script src="vistas/plugins/summernote/summernote-bs4.min.js"></script>
-  
-
   <!-- Selected2 -->
   <script src="vistas/plugins/select2/js/select2.full.min.js"></script>
 
