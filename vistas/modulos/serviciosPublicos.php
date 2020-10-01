@@ -345,7 +345,7 @@
                 <h3 class="widget-user-username" style="color: #000;">Informacion de la Energia</h3>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle elevation-2" src="./images/icons/rayo.png" alt="User Avatar">
+                <img class="img-circle elevation-2" src="./images/servicios/rayo.png" alt="User Avatar">
               </div>
               <div class="card-footer">
                 <div class="row">
@@ -459,12 +459,12 @@
             <!-- Widget: user widget style 1 -->
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-info-ag">
+              <div class="widget-user-header bg-primary">
                 <h3 class="widget-user-username" style="color: #fff;">Informacion del Agua</h3>
                 <h5 class="widget-user-desc" style="color: #fff;">Datos</h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle elevation-2" src="./images/icons/agua.png" alt="User Avatar">
+                <img class="img-circle elevation-2" src="./images/servicios/agua.png" alt="User Avatar">
               </div>
               <div class="card-footer">
                 <div class="row">
@@ -557,12 +557,12 @@
             <!-- Widget: user widget style 1 -->
             <div class="card card-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-info-en">
+              <div class="widget-user-header bg-danger">
                 <h3 class="widget-user-username" style="color: #000;">Informacion del Gas</h3>
                 <h5 class="widget-user-desc" style="color: #000;">Datos</h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle elevation-2" src="./images/icons/fuego.png" alt="User Avatar">
+                <img class="img-circle elevation-2" src="./images/servicios/fuego.png" alt="User Avatar">
               </div>
               <div class="card-footer">
                 <div class="row">
