@@ -64,7 +64,7 @@ class ServiciosControlador
 		                            Swal.fire({
 
 		                                type: 'error',
-		                                html: '<h3 class=".$color.">¡El usuario no se pudo ingresar correctamente!</h3>',
+		                                html: '<h3 class=".$color.">¡Los datos no se ingresaron correctamente!</h3>',
 		                                background: '#343a40',
 		                                showConfirmButton: true,
 		                                confirmButtonColor: '#dc3545',
@@ -147,7 +147,7 @@ class ServiciosControlador
 		                            Swal.fire({
 
 		                                type: 'error',
-		                                html: '<h3 class=".$color.">¡El usuario no se pudo ingresar correctamente!</h3>',
+		                                html: '<h3 class=".$color.">¡Los datos no se ingresaron correctamente!</h3>',
 		                                background: '#343a40',
 		                                showConfirmButton: true,
 		                                confirmButtonColor: '#dc3545',
@@ -215,7 +215,7 @@ class ServiciosControlador
 		                            Swal.fire({
 
 		                                type: 'error',
-		                                html: '<h3 class=".$color.">¡El usuario no se pudo ingresar correctamente!</h3>',
+		                                html: '<h3 class=".$color.">¡Los datos no se ingresaron correctamente!</h3>',
 		                                background: '#343a40',
 		                                showConfirmButton: true,
 		                                confirmButtonColor: '#dc3545',
@@ -270,26 +270,26 @@ class ServiciosControlador
 
 		                        echo "<script>
 
-		                                    Swal.fire({
-												
-		                                        type: 'success',
-		                                        title: '<h3 class=".$color.">¡Los datos se modificaron correctamente!</h3>',
-		                                        background: '#343a40',
-		                                        showConfirmButton: true,
-		                                        confirmButtonColor: '#28a745',
-		                                        confirmButtonText: 'Ok',
-		                                        closeOnConfirm: false
-		                                        
+                                    Swal.fire({
+										
+                                        type: 'success',
+                                        title: '<h3 class=".$color.">¡Los datos se modificaron correctamente!</h3>',
+                                        background: '#343a40',
+                                        showConfirmButton: true,
+                                        confirmButtonColor: '#28a745',
+                                        confirmButtonText: 'Ok',
+                                        closeOnConfirm: false
+                                        
 
-		                                        }).then((result)=>{
+                                        }).then((result)=>{
 
-		                                        if(result.value){
+                                        if(result.value){
 
-		                                           window.location = 'serviciosPublicos';
-		                                        }      
-		                                    });
+                                           window.location = 'serviciosPublicos';
+                                        }      
+                                    });
 
-		                              </script>";
+                                </script>";
 
 		            }else{
 
@@ -356,7 +356,7 @@ class ServiciosControlador
 		                                    Swal.fire({
 												
 		                                        type: 'success',
-		                                        title: '<h3 class=".$color.">¡Los datos se ingresaron correctamente!</h3>',
+		                                        title: '<h3 class=".$color.">¡Los datos se modificaron correctamente!</h3>',
 		                                        background: '#343a40',
 		                                        showConfirmButton: true,
 		                                        confirmButtonColor: '#28a745',
@@ -383,7 +383,7 @@ class ServiciosControlador
 		                            Swal.fire({
 
 		                                type: 'error',
-		                                html: '<h3 class=".$color.">¡Los datos se ingresaron correctamente!</h3>',
+		                                html: '<h3 class=".$color.">¡Los datos no se modificaron correctamente!</h3>',
 		                                background: '#343a40',
 		                                showConfirmButton: true,
 		                                confirmButtonColor: '#dc3545',
@@ -424,7 +424,7 @@ class ServiciosControlador
 		                                    Swal.fire({
 												
 		                                        type: 'success',
-		                                        title: '<h3 class=".$color.">¡Los datos se ingresaron correctamente!</h3>',
+		                                        title: '<h3 class=".$color.">¡Los datos se modificaron correctamente!</h3>',
 		                                        background: '#343a40',
 		                                        showConfirmButton: true,
 		                                        confirmButtonColor: '#28a745',
@@ -451,7 +451,7 @@ class ServiciosControlador
 		                            Swal.fire({
 
 		                                type: 'error',
-		                                html: '<h3 class=".$color.">¡Los datos no se ingresaron correctamente!</h3>',
+		                                html: '<h3 class=".$color.">¡Los datos no se modificaron correctamente!</h3>',
 		                                background: '#343a40',
 		                                showConfirmButton: true,
 		                                confirmButtonColor: '#dc3545',
