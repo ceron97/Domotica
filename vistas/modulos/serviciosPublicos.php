@@ -44,7 +44,7 @@
 
                     </div>
 
-                    <a href="#" class="small-box-footer" onclick="gas();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickGas"></i></a>
+                    <a class="small-box-footer" onclick="gas();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickGas"></i></a>
 
 
                 </div>
@@ -78,7 +78,7 @@
 
                   </div>
 
-                  <a href="#" class="small-box-footer" onclick="agua();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickAgua"></i></a>
+                  <a class="small-box-footer" onclick="agua();">Mas informacion <i class="fas fa-arrow-circle-right" id="clickAgua"></i></a>
 
                 </div>
 
@@ -110,7 +110,7 @@
 
                   </div>
 
-                  <a href="#" class="small-box-footer" onclick="energia();">Mas informacion<i class="fas fa-arrow-circle-right" id="clickEnergia"></i></a>
+                  <a class="small-box-footer" onclick="energia();">Mas informacion<i class="fas fa-arrow-circle-right" id="clickEnergia"></i></a>
 
                 </div>
 
