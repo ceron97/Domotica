@@ -637,6 +637,7 @@
           <div class="box-body">
             <div class="form-group">
               <div class="input-group">
+                <label for="exampleInputEmail1">Email address</label>
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
                 </div>
@@ -903,11 +904,12 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Numero Medidor</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
                 </div>
-                <input type="number" class="form-control input-lg" id="modificarNumeroMedidorGas" name="modificarNumeroMedidorGas" value="" required>
+                <input type="number" class="form-control input-sm" id="modificarNumeroMedidorGas" name="modificarNumeroMedidorGas" value="" required>
               </div>
             </div>
           </div>
@@ -917,6 +919,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarFactorCorreccion">Factor de Corrección</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -961,6 +964,7 @@
         =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorAgua">Numero Medidor</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -975,6 +979,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarTarifaAlcantarilladoSuntuario">Tarifa de Alcantarillado Suntuario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -989,6 +994,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarTarifaAlcantarilladoBasico">Tarifa de Alcantarillado Basico</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1004,6 +1010,7 @@
             =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarTarifaAlcantarilladoComplementario">Tarifa de Alcantarillado Complementario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1018,6 +1025,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarTarifaAcueductoSuntuario">Tarifa de Acueducto Suntuario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1032,6 +1040,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+               <label for="modificarTarifaAcueductoBasico">Tarifa de Acueducto Basico</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1046,6 +1055,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarTarifaAcueductoComplementario">Tarifa de Acueducto Complementario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1060,6 +1070,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarCargoFijoLiquidacionAcueducto">Cargo Fijo de Liquidacion Acueducto</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1074,6 +1085,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarCargoFijoLiquidacionAlcantarillado">Cargo Fijo de Liquidacion Alcantarillado</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1118,6 +1130,7 @@ Modal MODIFICAR Datos Energia
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorEnergia">Numero Medidor</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -1132,6 +1145,7 @@ Modal MODIFICAR Datos Energia
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarTarifaEnergia">Tarifa de Energia</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
