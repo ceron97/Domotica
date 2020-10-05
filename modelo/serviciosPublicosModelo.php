@@ -174,7 +174,7 @@ class modeloServicios
     ================================================================= */
     static public function mdlModificarDatosGas($tabla, $datos){
 
-      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET factorCorreccion = :factorCorreccion WHERE numeroMedidorGas = :numeroMedidorGas");
+      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET numeroMedidorGas = :numeroMedidorGas, factorCorreccion = :factorCorreccion");
       
 
       $stmt -> bindparam(":numeroMedidorGas", $datos["numeroMedidorGas"], PDO::PARAM_STR);
@@ -202,7 +202,7 @@ class modeloServicios
     ================================================================= */
     static public function mdlModificarDatosAgua($tabla, $datos){
 
-      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tarifaAlcantarilladoSuntuario = :tarifaAlcantarilladoSuntuario, tarifaAlcantarilladoBasico = :tarifaAlcantarilladoBasico, tarifaAlcantarilladoComplementario = :tarifaAlcantarilladoComplementario, tarifaAcueductoSuntuario = :tarifaAcueductoSuntuario, tarifaAcueductoBasico = :tarifaAcueductoBasico, tarifaAcueductoComplementario = :tarifaAcueductoComplementario, cargoFijoLiquidacionAcueducto = :cargoFijoLiquidacionAcueducto, cargoFijoLiquidacionAlcantarillado = :cargoFijoLiquidacionAlcantarillado WHERE numeroMedidorAgua = :numeroMedidorAgua");
+      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET numeroMedidorAgua = :numeroMedidorAgua, tarifaAlcantarilladoSuntuario = :tarifaAlcantarilladoSuntuario, tarifaAlcantarilladoBasico = :tarifaAlcantarilladoBasico, tarifaAlcantarilladoComplementario = :tarifaAlcantarilladoComplementario, tarifaAcueductoSuntuario = :tarifaAcueductoSuntuario, tarifaAcueductoBasico = :tarifaAcueductoBasico, tarifaAcueductoComplementario = :tarifaAcueductoComplementario, cargoFijoLiquidacionAcueducto = :cargoFijoLiquidacionAcueducto, cargoFijoLiquidacionAlcantarillado = :cargoFijoLiquidacionAlcantarillado");
       
 
       $stmt -> bindparam(":numeroMedidorAgua", $datos["numeroMedidorAgua"], PDO::PARAM_STR);
@@ -244,7 +244,7 @@ class modeloServicios
     ================================================================= */
     static public function mdlModificarDatosEnergia($tabla, $datos){
 
-      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tarifaEnergia = :tarifaEnergia WHERE numeroMedidorEnergia = :numeroMedidorEnergia");
+      $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET numeroMedidorEnergia = :numeroMedidorEnergia, tarifaEnergia = :tarifaEnergia");
       
 
       $stmt -> bindparam(":numeroMedidorEnergia", $datos["numeroMedidorEnergia"], PDO::PARAM_STR);
