@@ -73,106 +73,51 @@ document.addEventListener("DOMContentLoaded",function(event){
        =            GRAFICA DEL AGUA           =
        =============================================*/
       $(function () {
-          /*
-           * Flot Interactive Chart
-           grafica q de agua 
-           * -----------------------
-           */
-          // We use an inline data source in the example, usually data would
-          // be fetched from a server
-          var data        = [],
-              totalPoints = 100
-
-          function getRandomData() {
-
-            if (data.length > 0) {
-              data = data.slice(1)
-            }
-
-            // Do a random walk
-            while (data.length < totalPoints) {
-
-              var prev = data.length > 0 ? data[data.length - 1] : 50,
-                  y    = prev + Math.random() * 10 - 5
-
-              if (y < 0) {
-                y = 0
-              } else if (y > 100) {
-                y = 100
-              }
-
-              data.push(y)
-            }
-
-            // Zip the generated y values with the x values
-            var res = []
-            for (var i = 0; i < data.length; ++i) {
-              res.push([i, data[i]])
-            }
-
-            return res
-          }
-
-          var interactive_plot = $.plot('#interactive', [
-              {
-                data: getRandomData(),
-              }
+        // Graphs
+        var ctx = document.getElementById('chartAgua')
+        // eslint-disable-next-line no-unused-vars
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: [
+              'Sunday',
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday'
             ],
-            {
-              grid: {
-                borderColor: '#f3f3f3',
-                borderWidth: 1,
-                tickColor: '#fff'
-              },
-              series: {
-                color: '#42B9FF',
-                lines: {
-                  lineWidth: 2,
-                  show: true,
-                  fill: true,
-                },
-              },
-              yaxis: {
-                min: 0,
-                max: 100,
-                show: true
-              },
-              xaxis: {
-                show: true
-              }
-            }
-          )
-
-          var updateInterval = 500 //Fetch data ever x milliseconds
-          var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
-          function update() {
-
-            interactive_plot.setData([getRandomData()])
-
-            // Since the axes don't change, we don't need to call plot.setupGrid()
-            interactive_plot.draw()
-            if (realtime === 'on') {
-              setTimeout(update, updateInterval)
+            datasets: [{
+              data: [
+                15339,
+                21345,
+                18483,
+                24003,
+                23489,
+                24092,
+                12034
+              ],
+              lineTension: 0,
+              backgroundColor: 'transparent',
+              borderColor: 'blue',
+              borderWidth: 4,
+              pointBackgroundColor: 'blue'
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: false
+                }
+              }]
+            },
+            legend: {
+              display: false
             }
           }
-
-          //INITIALIZE REALTIME DATA FETCHING
-          if (realtime === 'on') {
-            update()
-          }
-          //REALTIME TOGGLE
-          $('#realtime .btn').click(function () {
-            if ($(this).data('toggle') === 'on') {
-              realtime = 'on'
-            }
-            else {
-              realtime = 'off'
-            }
-            update()
-          })
-          /*
-           * END INTERACTIVE CHART
-           */
+        })
       });
 
 
@@ -180,105 +125,51 @@ document.addEventListener("DOMContentLoaded",function(event){
        =            GRAFICA DE LA ENERGIA            =
        =============================================*/
       $(function () {
-          /*
-           * Flot Interactive Chart
-           * -----------------------
-           */
-          // We use an inline data source in the example, usually data would
-          // be fetched from a server
-          var data        = [],
-              totalPoints = 100
-
-          function getRandomData() {
-
-            if (data.length > 0) {
-              data = data.slice(1)
-            }
-
-            // Do a random walk
-            while (data.length < totalPoints) {
-
-              var prev = data.length > 0 ? data[data.length - 1] : 50,
-                  y    = prev + Math.random() * 10 - 5
-
-              if (y < 0) {
-                y = 0
-              } else if (y > 100) {
-                y = 100
-              }
-
-              data.push(y)
-            }
-
-            // Zip the generated y values with the x values
-            var res = []
-            for (var i = 0; i < data.length; ++i) {
-              res.push([i, data[i]])
-            }
-
-            return res
-          }
-
-          var interactive_plot = $.plot('#interactive-e', [
-              {
-                data: getRandomData(),
-              }
+        // Graphs
+        var ctx = document.getElementById('chartEnergia')
+        // eslint-disable-next-line no-unused-vars
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: [
+              'Sunday',
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday'
             ],
-            {
-              grid: {
-                borderColor: '#f3f3f3',
-                borderWidth: 1,
-                tickColor: '#f3f3f3'
-              },
-              series: {
-                color: '#FDD612',
-                lines: {
-                  lineWidth: 2,
-                  show: true,
-                  fill: true,
-                },
-              },
-              yaxis: {
-                min: 0,
-                max: 100,
-                show: true
-              },
-              xaxis: {
-                show: true
-              }
-            }
-          )
-
-          var updateInterval = 500 //Fetch data ever x milliseconds
-          var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
-          function update() {
-
-            interactive_plot.setData([getRandomData()])
-
-            // Since the axes don't change, we don't need to call plot.setupGrid()
-            interactive_plot.draw()
-            if (realtime === 'on') {
-              setTimeout(update, updateInterval)
+            datasets: [{
+              data: [
+                15339,
+                21345,
+                18483,
+                24003,
+                23489,
+                24092,
+                12034
+              ],
+              lineTension: 0,
+              backgroundColor: 'transparent',
+              borderColor: 'yellow',
+              borderWidth: 4,
+              pointBackgroundColor: 'yellow'
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: false
+                }
+              }]
+            },
+            legend: {
+              display: false
             }
           }
-
-          //INITIALIZE REALTIME DATA FETCHING
-          if (realtime === 'on') {
-            update()
-          }
-          //REALTIME TOGGLE
-          $('#realtime .btn').click(function () {
-            if ($(this).data('toggle') === 'on') {
-              realtime = 'on'
-            }
-            else {
-              realtime = 'off'
-            }
-            update()
-          })
-          /*
-           * END INTERACTIVE CHART
-           */
+        })
       });
 
 
@@ -287,107 +178,52 @@ document.addEventListener("DOMContentLoaded",function(event){
        =            GRAFICA DE LA GAS           =
        =============================================*/
       $(function () {
-          /*
-           * Flot Interactive Chart
-           * -----------------------
-           */
-          // We use an inline data source in the example, usually data would
-          // be fetched from a server
-          var data        = [],
-              totalPoints = 100
-
-          function getRandomData() {
-
-            if (data.length > 0) {
-              data = data.slice(1)
-            }
-
-            // Do a random walk
-            while (data.length < totalPoints) {
-
-              var prev = data.length > 0 ? data[data.length - 1] : 50,
-                  y    = prev + Math.random() * 10 - 5
-
-              if (y < 0) {
-                y = 0
-              } else if (y > 100) {
-                y = 100
-              }
-
-              data.push(y)
-            }
-
-            // Zip the generated y values with the x values
-            var res = []
-            for (var i = 0; i < data.length; ++i) {
-              res.push([i, data[i]])
-            }
-
-            return res
-          }
-
-          var interactive_plot = $.plot('#interactive-g', [
-              {
-                data: getRandomData(),
-              }
+        // Graphs
+        var ctx = document.getElementById('chartGas')
+        // eslint-disable-next-line no-unused-vars
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: [
+              'Lunes',
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday'
             ],
-            {
-              grid: {
-                borderColor: '#f3f3f3',
-                borderWidth: 1,
-                tickColor: '#f3f3f3'
-              },
-              series: {
-                color: '#FF0C08',
-                lines: {
-                  lineWidth: 2,
-                  show: true,
-                  fill: true,
-                },
-              },
-              yaxis: {
-                min: 0,
-                max: 100,
-                show: true
-              },
-              xaxis: {
-                show: true
-              }
-            }
-          )
-
-          var updateInterval = 500 //Fetch data ever x milliseconds
-          var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
-          function update() {
-
-            interactive_plot.setData([getRandomData()])
-
-            // Since the axes don't change, we don't need to call plot.setupGrid()
-            interactive_plot.draw()
-            if (realtime === 'on') {
-              setTimeout(update, updateInterval)
+            datasets: [{
+              data: [
+                15339,
+                21345,
+                18483,
+                24003,
+                23489,
+                24092,
+                12034
+              ],
+              lineTension: 0,
+              backgroundColor: 'transparent',
+              borderColor: 'red',
+              borderWidth: 4,
+              pointBackgroundColor: 'red'
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: false
+                }
+              }]
+            },
+            legend: {
+              display: false
             }
           }
-
-          //INITIALIZE REALTIME DATA FETCHING
-          if (realtime === 'on') {
-            update()
-          }
-          //REALTIME TOGGLE
-          $('#realtime .btn').click(function () {
-            if ($(this).data('toggle') === 'on') {
-              realtime = 'on'
-            }
-            else {
-              realtime = 'off'
-            }
-            update()
-          })
-          /*
-           * END INTERACTIVE CHART
-           */
+        })
       });
-
     /*=============================================
        =            MOSTRAR INFO DEL GAS           =
        =============================================*/

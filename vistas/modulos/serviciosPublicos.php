@@ -53,8 +53,6 @@
 
             </div>
 
-            <br>
-
           <!-- /*=============================================
             =            TARJETA DEL AGUA            =
             =============================================*/ -->
@@ -85,7 +83,6 @@
                 <button hidden class="btn btn-primary hiddenAguaButton" data-toggle="modal" data-target="#modalCrearDatosAgua"><i class="fas fa-tint" style="color: #fff;"></i>  Crear datos del Agua</button>
 
             </div>
-
 
           <!-- =============================================
                   =          TARJETAS ENERGIA         =
@@ -146,12 +143,14 @@
 
                     </div><!-- fin de la tarjeta -->
 
-                    <div class="card-body">
+                    <div class="card">
 
-                      <div id="interactive-g" style="height: 300px;"></div>
+	                    <div class="card-body">
 
-                    </div>
+	                      <canvas id="chartGas" style=" width: 100%; height: 300px;"></canvas>
 
+	                    </div>
+	                </div>
                 </div>
 
                 <!-- =============================================
@@ -201,11 +200,14 @@
 
                   </div><!-- fin de la tarjeta -->
 
-                  <div class="card-body">
+                  	<div class="card">
 
-                    <div id="interactive" style="height: 300px;"></div>
+	                    <div class="card-body">
 
-                  </div>
+	                      <canvas id="chartAgua" style=" width: 100%; height: 300px;"></canvas>
+
+	                    </div>
+	                </div>
 
               </div>
 
@@ -238,9 +240,6 @@
 
             <section id="infoEnergia" class="hiddenEnergiaCont" hidden>
               
-              <!-- =============================================
-                  =            DIAGRAM DE LINEAS DE LA ENERGIA           =
-                  ============================================= -->
                 <div class="col-lg-12">
 
                     <div class="card card-warning card-outline">
@@ -259,11 +258,15 @@
 
                     </div><!-- fin de la tarjeta -->
 
-                    <div class="card-body">
+	                    <div class="card">
 
-                        <div id="interactive-e" style="height: 300px;"></div>
+		                    <div class="card-body">
 
-                    </div>
+		                      <canvas id="chartEnergia" style=" width: 100%; height: 300px;"></canvas>
+
+		                    </div>
+
+		                </div>
 
                 </div>
 
@@ -291,7 +294,7 @@
 
        
         <!-- /*=============================================
-        =           FIN DEL CARD DEL ENERGIA          =
+        =           FIN DE LOS CARDS        =
         =============================================*/ -->
 
       

@@ -90,15 +90,11 @@ session_start();
   <script src="vistas/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <!-- SweetAlert2 -->
   <script src="vistas/plugins/sweetalert2/sweetalert2.min.js"></script>
-  <!-- sweetalert 2 theme dark -->
-  <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script> -->
-
-
   <!-- bootstrap color picker -->
   <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 
   <!-- OPTIONAL SCRIPTS -->
-  <script src="vistas/plugins/chart.js/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
   <script src="vistas/dist/js/demo.js"></script>
   <script src="vistas/dist/js/pages/dashboard3.js"></script>
 
