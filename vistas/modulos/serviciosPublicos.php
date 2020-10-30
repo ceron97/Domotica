@@ -624,7 +624,7 @@
 =================================================================--> 
 <!-- The Modal -->
 <div class="modal fade" id="modalCrearDatosGas">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-md">
     <div class="modal-content" style="background: #343a40; color:#fff;">
       <form role="form" method="post" enctype="multipart/form-data">
         <!-- Modal Header -->
@@ -639,8 +639,8 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+                <label for="modificarNumeroMedidorGas">Numero Medidor</label>
               <div class="input-group">
-                <label for="exampleInputEmail1">Email address</label>
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
                 </div>
@@ -653,6 +653,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Factor de correción</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -680,8 +681,8 @@
   Modal Crear Datos Agua
 =================================================================--> 
 <!-- The Modal -->
-<div class="modal fade" id="modalCrearDatosAgua">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="modalCrearDatosAgua" >
+  <div class="modal-dialog modal-md ">
     <div class="modal-content" style="background: #343a40; color:#fff;">
       <form role="form" method="post" enctype="multipart/form-data">
         <!-- Modal Header -->
@@ -690,12 +691,13 @@
           <button type="button" class="close" style="color:red;" data-dismiss="modal">&times;</button>
         </div>
         <!-- contenido del modal -->
-        <div class="modal-body" style="background: #6c757d; color:#fff;">
+        <div class="modal-body" style="background: #6c757d; color:#fff;" >
           <!--  ================================================================
             INGRESA N° contador
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Numero del Medidor</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -709,6 +711,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa alcantarillado suntuario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -722,6 +725,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa alcantarillado Basico</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -736,6 +740,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa alcantarillado complementario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -750,6 +755,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa acueducto suntuario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -764,6 +770,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa Acueducto Basico</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -778,6 +785,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa acueducto complementario</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -792,6 +800,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Cargo fijo liquidacion acueducto</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -806,6 +815,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Cargo fijo liquidacion alcantarillado</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -834,7 +844,7 @@
 =================================================================--> 
 <!-- The Modal -->
 <div class="modal fade" id="modalCrearDatosEnergia">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-md">
     <div class="modal-content" style="background: #343a40; color:#fff;">
       <form role="form" method="post" enctype="multipart/form-data">
         <!-- Modal Header -->
@@ -850,6 +860,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Numero del medidor</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
@@ -863,6 +874,7 @@
           =================================================================  --> 
           <div class="box-body">
             <div class="form-group">
+              <label for="modificarNumeroMedidorGas">Tarifa de Energia</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-address-card"></i></span>
